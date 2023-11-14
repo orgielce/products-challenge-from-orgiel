@@ -1,0 +1,48 @@
+.not-found-container {
+  align-items: center;
+  background: var(--background1);
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.not-fount-content {
+  border-radius: 20px;
+  height: auto;
+  margin: 0 auto;
+  padding: 40px;
+  width: 800px;
+
+  img {
+    width: 80px;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    margin: 0 auto;
+    display: block;
+  }
+
+  p {
+    font-size: 56rem;
+    margin: 16px 0;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 96px;
+    margin: 16px 0 48px 0;
+    text-align: center;
+  }
+
+  button {
+    margin: 0 auto;
+    display: block;
+    cursor: default;
+  }
+
+  button:hover {
+    background-color: var(--color1);
+    color: var(--background1) !important;
+  }
+
+  button > img { -webkit-filter: invert(1); filter: invert(1) }
+}
