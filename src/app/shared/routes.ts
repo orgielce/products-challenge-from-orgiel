@@ -1,6 +1,6 @@
 export enum ROUTES_PATH {
   // public routes
-  Auth = 'auth',
+  Login = 'auth/login',
 
   // protected routes
   Products = 'products',

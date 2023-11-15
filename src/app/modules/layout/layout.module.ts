@@ -1,16 +1,16 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 
-import { LayoutComponent } from './layout.component';
+import {LayoutComponent} from './layout.component';
 import {LayoutRoutingModule} from "./layout-routing.module";
 
-import { ButtonModule } from 'primeng/button';
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [
-    LayoutComponent
+    LayoutComponent,
   ],
   imports: [
     CommonModule,
@@ -21,4 +21,5 @@ import { ButtonModule } from 'primeng/button';
     ButtonModule
   ]
 })
-export class LayoutModule { }
+export class LayoutModule {
+}

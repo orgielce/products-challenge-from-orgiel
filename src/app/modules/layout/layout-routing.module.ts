@@ -12,6 +12,8 @@ import {ROUTES_PATH} from "../../shared";
       children: [
         {
           path: '', redirectTo: ROUTES_PATH.Products, pathMatch: 'full',
+        }, {
+          path: ROUTES_PATH.Products, component: LayoutComponent,
         }
       ]
     },
