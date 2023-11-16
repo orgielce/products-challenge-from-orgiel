@@ -1,0 +1,36 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  min-width: 760px !important;
+}
+
+html {
+  font-size: .55rem;
+}
+
+body {
+  font-size: .55rem;
+  margin: 0;
+  font-family: var(--ff-lato);
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 760px) and (orientation: portrait) {
+  html {
+    font-size: 1rem
+  }
+}
+// tablet & desktop resolution -------- 760px - 2960px
+@for $i from 0 through 2200 {
+  $part: 0px + (760+($i));
+  $result: 0px + (($part/760)*0.55);
+  @media only screen and (min-width: $part) {
+    html { font-size: $result; }
+  }
+}

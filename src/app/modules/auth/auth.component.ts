@@ -1,7 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
+
 // import {Store} from "@ngrx/store";
 import {BaseFormHelper, Credentials} from "../../shared";
+import {environment} from "../../../environments/environment";
 
 @Component({
   selector: 'app-auth',
@@ -12,8 +15,9 @@ export class AuthComponent implements OnInit {
 
   authForm!: FormGroup;
   utils: BaseFormHelper;
+  env = environment;
 
-  constructor(private fb: FormBuilder/*, private store: Store<GlobalState>*/) {
+  constructor(private fb: FormBuilder, private router: Router/*, private store: Store<GlobalState>*/) {
     this.utils = new BaseFormHelper();
     this.authForm = this.fb.group(
       {
@@ -22,10 +26,12 @@ export class AuthComponent implements OnInit {
       });
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  setLogin(): void {
+  openNewTab = (url: string) => window.open(url, "_blank");
+
+  setLogin = (): void => {
+    console.log(this.authForm, 777)
     if (this.authForm.invalid) return;
 
     const payload: Credentials = {

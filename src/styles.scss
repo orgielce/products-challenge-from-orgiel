@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+* All scss imports
+*/
+// primeng
+@import "primeicons/primeicons.css";
+
+// google fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+// custom css
+@import "./assets/styles/base";
+@import "./assets/styles/fields";
+
+
+// App colors
+:root {
+  // fonts
+  --ff-lato: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  // backgrounds
+  --background1: #d6d6dd;
+  --background2: #E8EDED;
+  --background3: #F4F2EE;
+
+  // colors
+  --color-invalid: #c00;
+
+  --bittersweet-50: #FFF3F1;
+  --bittersweet-100: #FFE5E1;
+  --bittersweet-200: #FFCEC7;
+  --bittersweet-300: #FFACA0;
+  --bittersweet-400: #FF725D;
+  --bittersweet-500: #F8533B;
+  --bittersweet-600: #E5371D;
+  --bittersweet-600-filter: invert(31%) sepia(40%) saturate(3677%) hue-rotate(347deg) brightness(89%) contrast(101%);
+  --bittersweet-700: #C12A14;
+  --bittersweet-800: #A02614;
+  --bittersweet-900: #842618;
+  --bittersweet-950: #480F07;
+
+}
+
+input, button {
+  transition: all 0.5s ease-out;
+}
+
+input::placeholder {
+  color: var(--bittersweet-400);
+}

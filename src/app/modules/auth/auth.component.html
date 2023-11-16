@@ -1,25 +1,37 @@
 <div class="auth-container">
-  <div class="auth-form-container">
+  <div class="auth-content">
+
+    <div class="auth-content-left">
+      <div>
+        <img src="assets/images/brand.svg" width="100" height="100" alt="SLDMark Brand">
+        <p>we know what you like</p>
+      </div>
+
+      <img src="assets/images/brand-slogan-1.png" width="400" height="400" alt="Apps">
+    </div>
+
     <form [formGroup]="authForm">
 
-      <img src="assets/images/fotc.svg" alt="FOTC">
+      <label>Name: </label>
 
-      <label>Username: </label>
-
-      <input type="text" placeholder="Enter name" name="name" autocomplete="off"
+      <input type="text" placeholder="Laura Smitt" name="name" autocomplete="off"
              formControlName="name"
              [ngClass]="{'text-invalid': utils.invalidField(authForm, 'name')}">
 
-      <label>Password: </label>
+      <label>Key: </label>
 
-      <input type="text" placeholder="Enter your key" name="key"
+      <input type="text" placeholder="Your access key" name="key" autocomplete="off"
              formControlName="key"
              [ngClass]="{'text-invalid': utils.invalidField(authForm, 'key')}">
+      <div (click)="openNewTab(env.barCodeLookupLoginUrl)">Forget key</div>
 
-      <button type="button" class="base-btn"
+      <button type="button"
               (click)="setLogin()"
               [disabled]="authForm.invalid"
-              [ngClass]="{'valid-btn': authForm.valid}">Login</button>
+              [ngClass]="{'invalid-btn': authForm.invalid}">Login</button>
+
+      <p>Doesn't have an account yet? <span (click)="openNewTab(env.barCodeLookupSignUpUrl)">SignUp</span></p>
+
     </form>
   </div>
 </div>

@@ -1,0 +1,13 @@
+.text-invalid {
+  border: solid 0.062rem var(--color-invalid);
+}
+
+.text-error-hidden {
+  visibility: hidden;
+  color: var(--g3);
+}
+
+.text-error-visible {
+  visibility: visible;
+  color: var(--bg8) !important;
+}
