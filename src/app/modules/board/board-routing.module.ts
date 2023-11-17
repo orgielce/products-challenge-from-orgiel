@@ -1,24 +1,24 @@
 import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 
-import {LayoutComponent} from "./layout.component";
 import {ROUTES_PATH} from "../../shared";
+import {BoardComponent} from "./board.component";
 
 @NgModule({
   imports: [RouterModule.forChild([
     {
       path: '',
-      component: LayoutComponent,
+      component: BoardComponent,
       children: [
         {
-          path: '', redirectTo: ROUTES_PATH.Index, pathMatch: 'full',
+          path: '', redirectTo: ROUTES_PATH.Products, pathMatch: 'full',
         }, {
-          path: ROUTES_PATH.Index, component: LayoutComponent,
+          path: ROUTES_PATH.Products, component: BoardComponent,
         }
       ]
     },
   ])],
   exports: [RouterModule]
 })
-export class LayoutRoutingModule {
+export class BoardRoutingModule {
 }

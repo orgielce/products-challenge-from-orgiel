@@ -12,6 +12,11 @@
 
     <form [formGroup]="authForm">
 
+      <div [routerLink]="customRoutes.Index">
+        <img src="assets/icons/back.svg" width="40" height="40" alt="Go to index page">
+        <div>Index</div>
+      </div>
+
       <label>Name: </label>
 
       <input type="text" placeholder="Laura Smitt" name="name" autocomplete="off"
@@ -33,5 +38,6 @@
       <p>Doesn't have an account yet? <span (click)="openNewTab(env.barCodeLookupSignUpUrl)">SignUp</span></p>
 
     </form>
+
   </div>
 </div>

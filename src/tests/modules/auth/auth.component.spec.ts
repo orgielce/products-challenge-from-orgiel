@@ -4,6 +4,7 @@ import {AuthComponent} from "../../../app/modules";
 import {CommonModule} from "@angular/common";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {environment} from "../../../environments/environment";
+import {ROUTES_PATH} from "../../../app/shared";
 
 describe('AuthComponent', () => {
 
@@ -59,6 +60,10 @@ describe('AuthComponent', () => {
     expect(loginUrl).toEqual(environment.barCodeLookupLoginUrl);
   });
 
+  test(`should have customRoutes variable`, () => {
+    expect(component.customRoutes).toEqual(ROUTES_PATH);
+  });
+
   test('should have dom elements', () => {
     fixture.detectChanges();
     // console.log(compiled.innerHTML);
@@ -75,6 +80,6 @@ describe('AuthComponent', () => {
     expect( rightColumn ).toBeTruthy();
     expect( inputs.length ).toBe(2);
     expect( labels.length ).toBe(2);
-    expect( images.length ).toBe(2);
+    expect( images.length ).toBe(3);
   });
 });

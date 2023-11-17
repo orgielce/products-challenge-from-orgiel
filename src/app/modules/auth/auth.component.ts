@@ -3,7 +3,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 
 // import {Store} from "@ngrx/store";
-import {BaseFormHelper, Credentials} from "../../shared";
+import {BaseFormHelper, Credentials, ROUTES_PATH} from "../../shared";
 import {environment} from "../../../environments/environment";
 
 @Component({
@@ -16,6 +16,7 @@ export class AuthComponent implements OnInit {
   authForm!: FormGroup;
   utils: BaseFormHelper;
   env = environment;
+  customRoutes = ROUTES_PATH;
 
   constructor(private fb: FormBuilder, private router: Router/*, private store: Store<GlobalState>*/) {
     this.utils = new BaseFormHelper();
