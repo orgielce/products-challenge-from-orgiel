@@ -1,3 +1,5 @@
 export const environment = {
-  barCodeLookupUrl: "https://account.barcodelookup.com/",
+  barCodeLookupLoginUrl: "https://account.barcodelookup.com/",
+  barCodeLookupSignUpUrl: "https://www.barcodelookup.com/api#sign-up",
 };
+
